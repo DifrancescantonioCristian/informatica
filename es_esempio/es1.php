@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>ES1</title>
+  </head>
+  <body>
+    <h1 id="title1">NON CLICCARE</h1>
+    <button id="btn1">CLICCAMI</button>
+    <?php
+    echo '
+    <script>
+      var cliccato = false;
+      var btn = document.getElementById("btn1");
+      btn.addEventListener("click", () => {
+        cliccato = !cliccato;
+        if(cliccato){
+          document.getElementById("title1").innerHTML =
+          "ti avevo detto di non cliccare scemo";
+          document.getElementById("btn1").innerHTML =
+          "clicca qui per sistemare";
+        }else{
+          document.getElementById("title1").innerHTML =
+          "OK, ORA NON CLICCARE";
+          document.getElementById("btn1").innerHTML =
+          "CLICCAMI";
+        }
+      });
+    </script>'
+    ?>
+  </body>
+</html>
